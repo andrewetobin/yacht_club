@@ -51,7 +51,7 @@ yacht_club.add_member(captain)
 yacht_club.members
 # => ["Howell"]
 ```
-Iteration 4
+## Iteration 4
 ```
 yacht_club = YachtClub.new("Mike's Yacht Club")
 # => <#YachtClub...>
