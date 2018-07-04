@@ -17,23 +17,20 @@ class YachtTest < Minitest::Test
     assert_equal 40, yacht.length
   end
 
+  def test_it_is_not_sailing_at_beginning
+    yacht = Yacht.new("S.S. Minnow", 40)
+
+    assert_equal false, yacht.sailing?
+  end
+
+  def test_sail
+    yacht = Yacht.new("S.S. Minnow", 40)
+
+    assert_equal false, yacht.sailing?
+    assert_equal "Aye, aye!", yacht.sail
+    assert_equal true, yacht.sailing?
+  end
+
 
 
 end
-
-
-
-
-
-# yacht = Yacht.new("S.S. Minnow", 40)
-# # => <#Yacht...>
-# yacht.name
-# # => "S.S. Minnow"
-# yacht.length
-# # => 40
-# yacht.sailing?
-# # => false
-# yacht.sail
-# # => "Aye, aye!"
-# yacht.sailing?
-# # => true
